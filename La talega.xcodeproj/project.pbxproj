@@ -7,20 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210958B316D59FD900426771 /* latalegaBD.plist in Resources */ = {isa = PBXBuildFile; fileRef = 210958B216D59FD900426771 /* latalegaBD.plist */; };
+		210958BA16D649A500426771 /* cercleBlau.png in Resources */ = {isa = PBXBuildFile; fileRef = 210958B416D649A500426771 /* cercleBlau.png */; };
+		210958BB16D649A500426771 /* cercleBlau@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 210958B516D649A500426771 /* cercleBlau@2x.png */; };
+		210958BC16D649A500426771 /* cercleRoig.png in Resources */ = {isa = PBXBuildFile; fileRef = 210958B616D649A500426771 /* cercleRoig.png */; };
+		210958BD16D649A500426771 /* cercleRoig@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 210958B716D649A500426771 /* cercleRoig@2x.png */; };
+		210958BE16D649A500426771 /* cercleVerd.png in Resources */ = {isa = PBXBuildFile; fileRef = 210958B816D649A500426771 /* cercleVerd.png */; };
+		210958BF16D649A500426771 /* cercleVerd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 210958B916D649A500426771 /* cercleVerd@2x.png */; };
+		213F5E7816D3FD52005DFB59 /* usuaris.plist in Resources */ = {isa = PBXBuildFile; fileRef = 213F5E7716D3FD52005DFB59 /* usuaris.plist */; };
+		213F5E7F16D43167005DFB59 /* NouDinarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213F5E7E16D43167005DFB59 /* NouDinarViewController.m */; };
 		21FF887916D28FDF00CB5BF3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FF887816D28FDF00CB5BF3 /* UIKit.framework */; };
 		21FF887B16D28FDF00CB5BF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FF887A16D28FDF00CB5BF3 /* Foundation.framework */; };
 		21FF887D16D28FDF00CB5BF3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FF887C16D28FDF00CB5BF3 /* CoreGraphics.framework */; };
 		21FF888316D28FDF00CB5BF3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 21FF888116D28FDF00CB5BF3 /* InfoPlist.strings */; };
 		21FF888516D28FDF00CB5BF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF888416D28FDF00CB5BF3 /* main.m */; };
 		21FF888916D28FDF00CB5BF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF888816D28FDF00CB5BF3 /* AppDelegate.m */; };
-		21FF888B16D28FDF00CB5BF3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF888A16D28FDF00CB5BF3 /* Default.png */; };
-		21FF888D16D28FDF00CB5BF3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF888C16D28FDF00CB5BF3 /* Default@2x.png */; };
-		21FF888F16D28FDF00CB5BF3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF888E16D28FDF00CB5BF3 /* Default-568h@2x.png */; };
 		21FF889216D28FDF00CB5BF3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21FF889016D28FDF00CB5BF3 /* MainStoryboard.storyboard */; };
 		21FF889516D28FDF00CB5BF3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF889416D28FDF00CB5BF3 /* ViewController.m */; };
+		21FF88A916D2B61900CB5BF3 /* calendari.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88A316D2B61900CB5BF3 /* calendari.png */; };
+		21FF88AA16D2B61900CB5BF3 /* calendari@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88A416D2B61900CB5BF3 /* calendari@2x.png */; };
+		21FF88AB16D2B61900CB5BF3 /* titol.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88A516D2B61900CB5BF3 /* titol.png */; };
+		21FF88AC16D2B61900CB5BF3 /* titol@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88A616D2B61900CB5BF3 /* titol@2x.png */; };
+		21FF88AD16D2B61900CB5BF3 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88A716D2B61900CB5BF3 /* user.png */; };
+		21FF88AE16D2B61900CB5BF3 /* user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88A816D2B61900CB5BF3 /* user@2x.png */; };
+		21FF88C216D2C13800CB5BF3 /* TaulaUsuarisViewControler.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF88C116D2C13800CB5BF3 /* TaulaUsuarisViewControler.m */; };
+		21FF88C716D2D4BD00CB5BF3 /* TaulaDinarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF88C616D2D4BD00CB5BF3 /* TaulaDinarsViewController.m */; };
+		21FF88CB16D2DC7300CB5BF3 /* NouUsuariViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF88CA16D2DC7300CB5BF3 /* NouUsuariViewController.m */; };
+		21FF88D316D2E43900CB5BF3 /* bt_ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88D116D2E43900CB5BF3 /* bt_ok.png */; };
+		21FF88D416D2E43900CB5BF3 /* bt_ok@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88D216D2E43900CB5BF3 /* bt_ok@2x.png */; };
+		21FF88D716D2E80900CB5BF3 /* celda.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88D516D2E80900CB5BF3 /* celda.png */; };
+		21FF88D816D2E80900CB5BF3 /* celda@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88D616D2E80900CB5BF3 /* celda@2x.png */; };
+		21FF88DB16D2EB6E00CB5BF3 /* bt_cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88D916D2EB6D00CB5BF3 /* bt_cancel.png */; };
+		21FF88DC16D2EB6E00CB5BF3 /* bt_cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88DA16D2EB6D00CB5BF3 /* bt_cancel@2x.png */; };
+		21FF88E416D2F1EA00CB5BF3 /* icoApp.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88E316D2F1EA00CB5BF3 /* icoApp.png */; };
+		21FF88E616D2F1ED00CB5BF3 /* icoApp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88E516D2F1ED00CB5BF3 /* icoApp@2x.png */; };
+		21FF88E816D2F35200CB5BF3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88E716D2F35200CB5BF3 /* Default-568h@2x.png */; };
+		21FF88EA16D2F35600CB5BF3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88E916D2F35600CB5BF3 /* Default@2x.png */; };
+		21FF88EC16D2F35B00CB5BF3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88EB16D2F35B00CB5BF3 /* Default.png */; };
+		21FF88F016D2F36F00CB5BF3 /* fondo-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88ED16D2F36E00CB5BF3 /* fondo-568h@2x.png */; };
+		21FF88F116D2F36F00CB5BF3 /* fondo.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88EE16D2F36E00CB5BF3 /* fondo.png */; };
+		21FF88F216D2F36F00CB5BF3 /* fondo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88EF16D2F36E00CB5BF3 /* fondo@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		210958B216D59FD900426771 /* latalegaBD.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = latalegaBD.plist; sourceTree = "<group>"; };
+		210958B416D649A500426771 /* cercleBlau.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cercleBlau.png; sourceTree = "<group>"; };
+		210958B516D649A500426771 /* cercleBlau@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cercleBlau@2x.png"; sourceTree = "<group>"; };
+		210958B616D649A500426771 /* cercleRoig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cercleRoig.png; sourceTree = "<group>"; };
+		210958B716D649A500426771 /* cercleRoig@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cercleRoig@2x.png"; sourceTree = "<group>"; };
+		210958B816D649A500426771 /* cercleVerd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cercleVerd.png; sourceTree = "<group>"; };
+		210958B916D649A500426771 /* cercleVerd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cercleVerd@2x.png"; sourceTree = "<group>"; };
+		213F5E7716D3FD52005DFB59 /* usuaris.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = usuaris.plist; sourceTree = "<group>"; };
+		213F5E7D16D43167005DFB59 /* NouDinarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NouDinarViewController.h; sourceTree = "<group>"; };
+		213F5E7E16D43167005DFB59 /* NouDinarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NouDinarViewController.m; sourceTree = "<group>"; };
 		21FF887516D28FDF00CB5BF3 /* La talega.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "La talega.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21FF887816D28FDF00CB5BF3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		21FF887A16D28FDF00CB5BF3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -31,12 +70,35 @@
 		21FF888616D28FDF00CB5BF3 /* La talega-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "La talega-Prefix.pch"; sourceTree = "<group>"; };
 		21FF888716D28FDF00CB5BF3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		21FF888816D28FDF00CB5BF3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		21FF888A16D28FDF00CB5BF3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		21FF888C16D28FDF00CB5BF3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		21FF888E16D28FDF00CB5BF3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		21FF889116D28FDF00CB5BF3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		21FF889316D28FDF00CB5BF3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		21FF889416D28FDF00CB5BF3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		21FF88A316D2B61900CB5BF3 /* calendari.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendari.png; sourceTree = "<group>"; };
+		21FF88A416D2B61900CB5BF3 /* calendari@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "calendari@2x.png"; sourceTree = "<group>"; };
+		21FF88A516D2B61900CB5BF3 /* titol.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = titol.png; sourceTree = "<group>"; };
+		21FF88A616D2B61900CB5BF3 /* titol@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "titol@2x.png"; sourceTree = "<group>"; };
+		21FF88A716D2B61900CB5BF3 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		21FF88A816D2B61900CB5BF3 /* user@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user@2x.png"; sourceTree = "<group>"; };
+		21FF88C016D2C13800CB5BF3 /* TaulaUsuarisViewControler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaulaUsuarisViewControler.h; sourceTree = "<group>"; };
+		21FF88C116D2C13800CB5BF3 /* TaulaUsuarisViewControler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaulaUsuarisViewControler.m; sourceTree = "<group>"; };
+		21FF88C516D2D4BD00CB5BF3 /* TaulaDinarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaulaDinarsViewController.h; sourceTree = "<group>"; };
+		21FF88C616D2D4BD00CB5BF3 /* TaulaDinarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaulaDinarsViewController.m; sourceTree = "<group>"; };
+		21FF88C916D2DC7300CB5BF3 /* NouUsuariViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NouUsuariViewController.h; sourceTree = "<group>"; };
+		21FF88CA16D2DC7300CB5BF3 /* NouUsuariViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NouUsuariViewController.m; sourceTree = "<group>"; };
+		21FF88D116D2E43900CB5BF3 /* bt_ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_ok.png; sourceTree = "<group>"; };
+		21FF88D216D2E43900CB5BF3 /* bt_ok@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_ok@2x.png"; sourceTree = "<group>"; };
+		21FF88D516D2E80900CB5BF3 /* celda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = celda.png; sourceTree = "<group>"; };
+		21FF88D616D2E80900CB5BF3 /* celda@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "celda@2x.png"; sourceTree = "<group>"; };
+		21FF88D916D2EB6D00CB5BF3 /* bt_cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_cancel.png; sourceTree = "<group>"; };
+		21FF88DA16D2EB6D00CB5BF3 /* bt_cancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_cancel@2x.png"; sourceTree = "<group>"; };
+		21FF88E316D2F1EA00CB5BF3 /* icoApp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icoApp.png; path = ../icoApp.png; sourceTree = "<group>"; };
+		21FF88E516D2F1ED00CB5BF3 /* icoApp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icoApp@2x.png"; path = "../icoApp@2x.png"; sourceTree = "<group>"; };
+		21FF88E716D2F35200CB5BF3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
+		21FF88E916D2F35600CB5BF3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		21FF88EB16D2F35B00CB5BF3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		21FF88ED16D2F36E00CB5BF3 /* fondo-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fondo-568h@2x.png"; sourceTree = "<group>"; };
+		21FF88EE16D2F36E00CB5BF3 /* fondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondo.png; sourceTree = "<group>"; };
+		21FF88EF16D2F36E00CB5BF3 /* fondo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fondo@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +115,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		213F5E8016D4316A005DFB59 /* NouDinar */ = {
+			isa = PBXGroup;
+			children = (
+				213F5E7D16D43167005DFB59 /* NouDinarViewController.h */,
+				213F5E7E16D43167005DFB59 /* NouDinarViewController.m */,
+			);
+			name = NouDinar;
+			sourceTree = "<group>";
+		};
 		21FF886C16D28FDF00CB5BF3 = {
 			isa = PBXGroup;
 			children = (
+				210958B216D59FD900426771 /* latalegaBD.plist */,
+				213F5E7716D3FD52005DFB59 /* usuaris.plist */,
 				21FF887E16D28FDF00CB5BF3 /* La talega */,
 				21FF887716D28FDF00CB5BF3 /* Frameworks */,
 				21FF887616D28FDF00CB5BF3 /* Products */,
@@ -86,8 +159,12 @@
 				21FF888716D28FDF00CB5BF3 /* AppDelegate.h */,
 				21FF888816D28FDF00CB5BF3 /* AppDelegate.m */,
 				21FF889016D28FDF00CB5BF3 /* MainStoryboard.storyboard */,
-				21FF889316D28FDF00CB5BF3 /* ViewController.h */,
-				21FF889416D28FDF00CB5BF3 /* ViewController.m */,
+				21FF88C416D2D49A00CB5BF3 /* Main */,
+				21FF88CC16D2DC7B00CB5BF3 /* NouUsuari */,
+				21FF88C316D2D48C00CB5BF3 /* TaulaUsuaris */,
+				21FF88C816D2D58A00CB5BF3 /* TaulaDinars */,
+				213F5E8016D4316A005DFB59 /* NouDinar */,
+				21FF88BF16D2C02000CB5BF3 /* imatges */,
 				21FF887F16D28FDF00CB5BF3 /* Supporting Files */,
 			);
 			path = "La talega";
@@ -100,11 +177,77 @@
 				21FF888116D28FDF00CB5BF3 /* InfoPlist.strings */,
 				21FF888416D28FDF00CB5BF3 /* main.m */,
 				21FF888616D28FDF00CB5BF3 /* La talega-Prefix.pch */,
-				21FF888A16D28FDF00CB5BF3 /* Default.png */,
-				21FF888C16D28FDF00CB5BF3 /* Default@2x.png */,
-				21FF888E16D28FDF00CB5BF3 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		21FF88BF16D2C02000CB5BF3 /* imatges */ = {
+			isa = PBXGroup;
+			children = (
+				21FF88EB16D2F35B00CB5BF3 /* Default.png */,
+				21FF88E916D2F35600CB5BF3 /* Default@2x.png */,
+				21FF88E716D2F35200CB5BF3 /* Default-568h@2x.png */,
+				21FF88E516D2F1ED00CB5BF3 /* icoApp@2x.png */,
+				21FF88E316D2F1EA00CB5BF3 /* icoApp.png */,
+				21FF88D116D2E43900CB5BF3 /* bt_ok.png */,
+				21FF88D216D2E43900CB5BF3 /* bt_ok@2x.png */,
+				21FF88D916D2EB6D00CB5BF3 /* bt_cancel.png */,
+				21FF88DA16D2EB6D00CB5BF3 /* bt_cancel@2x.png */,
+				21FF88A316D2B61900CB5BF3 /* calendari.png */,
+				21FF88A416D2B61900CB5BF3 /* calendari@2x.png */,
+				21FF88D516D2E80900CB5BF3 /* celda.png */,
+				21FF88D616D2E80900CB5BF3 /* celda@2x.png */,
+				210958B416D649A500426771 /* cercleBlau.png */,
+				210958B516D649A500426771 /* cercleBlau@2x.png */,
+				210958B616D649A500426771 /* cercleRoig.png */,
+				210958B716D649A500426771 /* cercleRoig@2x.png */,
+				210958B816D649A500426771 /* cercleVerd.png */,
+				210958B916D649A500426771 /* cercleVerd@2x.png */,
+				21FF88A516D2B61900CB5BF3 /* titol.png */,
+				21FF88A616D2B61900CB5BF3 /* titol@2x.png */,
+				21FF88A716D2B61900CB5BF3 /* user.png */,
+				21FF88A816D2B61900CB5BF3 /* user@2x.png */,
+				21FF88ED16D2F36E00CB5BF3 /* fondo-568h@2x.png */,
+				21FF88EE16D2F36E00CB5BF3 /* fondo.png */,
+				21FF88EF16D2F36E00CB5BF3 /* fondo@2x.png */,
+			);
+			name = imatges;
+			sourceTree = "<group>";
+		};
+		21FF88C316D2D48C00CB5BF3 /* TaulaUsuaris */ = {
+			isa = PBXGroup;
+			children = (
+				21FF88C016D2C13800CB5BF3 /* TaulaUsuarisViewControler.h */,
+				21FF88C116D2C13800CB5BF3 /* TaulaUsuarisViewControler.m */,
+			);
+			name = TaulaUsuaris;
+			sourceTree = "<group>";
+		};
+		21FF88C416D2D49A00CB5BF3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				21FF889316D28FDF00CB5BF3 /* ViewController.h */,
+				21FF889416D28FDF00CB5BF3 /* ViewController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		21FF88C816D2D58A00CB5BF3 /* TaulaDinars */ = {
+			isa = PBXGroup;
+			children = (
+				21FF88C516D2D4BD00CB5BF3 /* TaulaDinarsViewController.h */,
+				21FF88C616D2D4BD00CB5BF3 /* TaulaDinarsViewController.m */,
+			);
+			name = TaulaDinars;
+			sourceTree = "<group>";
+		};
+		21FF88CC16D2DC7B00CB5BF3 /* NouUsuari */ = {
+			isa = PBXGroup;
+			children = (
+				21FF88C916D2DC7300CB5BF3 /* NouUsuariViewController.h */,
+				21FF88CA16D2DC7300CB5BF3 /* NouUsuariViewController.m */,
+			);
+			name = NouUsuari;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,10 +302,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				21FF888316D28FDF00CB5BF3 /* InfoPlist.strings in Resources */,
-				21FF888B16D28FDF00CB5BF3 /* Default.png in Resources */,
-				21FF888D16D28FDF00CB5BF3 /* Default@2x.png in Resources */,
-				21FF888F16D28FDF00CB5BF3 /* Default-568h@2x.png in Resources */,
 				21FF889216D28FDF00CB5BF3 /* MainStoryboard.storyboard in Resources */,
+				21FF88A916D2B61900CB5BF3 /* calendari.png in Resources */,
+				21FF88AA16D2B61900CB5BF3 /* calendari@2x.png in Resources */,
+				21FF88AB16D2B61900CB5BF3 /* titol.png in Resources */,
+				21FF88AC16D2B61900CB5BF3 /* titol@2x.png in Resources */,
+				21FF88AD16D2B61900CB5BF3 /* user.png in Resources */,
+				21FF88AE16D2B61900CB5BF3 /* user@2x.png in Resources */,
+				21FF88D316D2E43900CB5BF3 /* bt_ok.png in Resources */,
+				21FF88D416D2E43900CB5BF3 /* bt_ok@2x.png in Resources */,
+				21FF88D716D2E80900CB5BF3 /* celda.png in Resources */,
+				21FF88D816D2E80900CB5BF3 /* celda@2x.png in Resources */,
+				21FF88DB16D2EB6E00CB5BF3 /* bt_cancel.png in Resources */,
+				21FF88DC16D2EB6E00CB5BF3 /* bt_cancel@2x.png in Resources */,
+				21FF88E416D2F1EA00CB5BF3 /* icoApp.png in Resources */,
+				21FF88E616D2F1ED00CB5BF3 /* icoApp@2x.png in Resources */,
+				21FF88E816D2F35200CB5BF3 /* Default-568h@2x.png in Resources */,
+				21FF88EA16D2F35600CB5BF3 /* Default@2x.png in Resources */,
+				21FF88EC16D2F35B00CB5BF3 /* Default.png in Resources */,
+				21FF88F016D2F36F00CB5BF3 /* fondo-568h@2x.png in Resources */,
+				21FF88F116D2F36F00CB5BF3 /* fondo.png in Resources */,
+				21FF88F216D2F36F00CB5BF3 /* fondo@2x.png in Resources */,
+				213F5E7816D3FD52005DFB59 /* usuaris.plist in Resources */,
+				210958B316D59FD900426771 /* latalegaBD.plist in Resources */,
+				210958BA16D649A500426771 /* cercleBlau.png in Resources */,
+				210958BB16D649A500426771 /* cercleBlau@2x.png in Resources */,
+				210958BC16D649A500426771 /* cercleRoig.png in Resources */,
+				210958BD16D649A500426771 /* cercleRoig@2x.png in Resources */,
+				210958BE16D649A500426771 /* cercleVerd.png in Resources */,
+				210958BF16D649A500426771 /* cercleVerd@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +344,10 @@
 				21FF888516D28FDF00CB5BF3 /* main.m in Sources */,
 				21FF888916D28FDF00CB5BF3 /* AppDelegate.m in Sources */,
 				21FF889516D28FDF00CB5BF3 /* ViewController.m in Sources */,
+				21FF88C216D2C13800CB5BF3 /* TaulaUsuarisViewControler.m in Sources */,
+				21FF88C716D2D4BD00CB5BF3 /* TaulaDinarsViewController.m in Sources */,
+				21FF88CB16D2DC7300CB5BF3 /* NouUsuariViewController.m in Sources */,
+				213F5E7F16D43167005DFB59 /* NouDinarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +435,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "La talega/La talega-Prefix.pch";
 				INFOPLIST_FILE = "La talega/La talega-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -274,7 +448,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "La talega/La talega-Prefix.pch";
 				INFOPLIST_FILE = "La talega/La talega-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -298,6 +474,7 @@
 				21FF889A16D28FDF00CB5BF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
