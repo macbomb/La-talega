@@ -18,6 +18,7 @@
 @end
 
 @implementation TaulaDinarsViewController
+@synthesize tbViewDinars;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -48,6 +49,13 @@
         rootDictionary = [[NSMutableDictionary alloc] init];
         dinarsMutableArray = [[NSMutableArray alloc] init];
     }
+    
+    UIImageView *imgFons = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fondo.png"]];
+    [tbViewDinars addSubview:imgFons];
+    [tbViewDinars setBackgroundView:imgFons];
+    [tbViewDinars setBackgroundColor:[UIColor clearColor]];
+    tbViewDinars.opaque = NO;
+    
 }
 
 -(NSString *)plistPath{
@@ -75,7 +83,7 @@
     
     // Return the number of rows in the section.
     
-    if (dinarsMutableArray.count < 1) {
+    if (dinarsMutableArray.count == 0) {
         return 1;
     }else{
         return dinarsMutableArray.count;
@@ -93,7 +101,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    if (dinarsMutableArray.count < 1) {
+    if (dinarsMutableArray.count == 0) {
         
         cell.textLabel.text = @"No hi ha cap dinar.";
     }else{
@@ -140,6 +148,7 @@
             imgCercle.hidden = NO;
             
         }
+        cell.tag = indexPath.row;
     }
     return cell;
 }
@@ -215,6 +224,15 @@
         nouDinarViewControler.delegate = self;
         
     }
+    if (dinarsMutableArray.count > 0){
+        if ([segue.identifier isEqualToString:@"GoToDetall"]) {
+            UITableViewCell *cell = (UITableViewCell *)sender;
+            DetallDinarViewController *detallDinarViewControler = (DetallDinarViewController*)segue.destinationViewController;
+            detallDinarViewControler.delegate = self;
+            detallDinarViewControler.index = cell.tag;
+            
+        }
+    }
 }
 
 - (IBAction)tornaInici:(UIBarButtonItem *)sender {
@@ -234,6 +252,10 @@
     }
     
     [self.tableView reloadData];
+}
+
+-(void)recargaTaulaDinars{
+    
 }
 
 @end

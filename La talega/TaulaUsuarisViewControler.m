@@ -18,6 +18,7 @@
 @end
 
 @implementation TaulaUsuarisViewControler
+@synthesize tbViewUsuaris;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -48,7 +49,12 @@
         usuarisMutableArray = [[NSMutableArray alloc] init];
     }
     
-    
+    UIImageView *imgFons = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fondo.png"]];
+    [tbViewUsuaris addSubview:imgFons];
+    [tbViewUsuaris setBackgroundView:imgFons];
+    [tbViewUsuaris setBackgroundColor:[UIColor clearColor]];
+    tbViewUsuaris.opaque = NO;
+
 }
 
 -(NSString *)plistPath{

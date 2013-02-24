@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "NouDinarViewController.h"
+#import "DetallDinarViewController.h"
 
-@interface TaulaDinarsViewController : UITableViewController <NouDinarDelegate>
+@interface TaulaDinarsViewController : UITableViewController <NouDinarDelegate, DetallDinarDelegate>
 
+@property (strong, nonatomic) IBOutlet UITableView *tbViewDinars;
 
 - (IBAction)tornaInici:(UIBarButtonItem *)sender;
 

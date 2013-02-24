@@ -20,6 +20,7 @@
 
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *btFet;
 
+@property (strong, nonatomic) IBOutlet UIImageView *viewFons;
 
 - (IBAction)btCancel:(UIBarButtonItem *)sender;
 - (IBAction)btFetPush:(id)sender;

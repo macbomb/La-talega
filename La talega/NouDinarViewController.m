@@ -66,11 +66,16 @@
     tbTriaComensals = [[UITableView alloc] initWithFrame:rectTbComensals style:UITableViewStyleGrouped];
     scrollview.contentSize = CGSizeMake(320, tbTriaComensals.frame.size.height - 80);
     [tbTriaComensals setBackgroundColor:[UIColor clearColor]];
+    tbTriaComensals.opaque = NO;
     tbTriaComensals.scrollEnabled = NO;
     tbTriaComensals.sectionHeaderHeight = 150;
     tbTriaComensals.sectionFooterHeight = 30;
     tbTriaComensals.allowsMultipleSelection = YES;
     
+    UIImageView *imgFons = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fondoNull2.png"]];
+    [tbTriaComensals addSubview:imgFons];
+    [tbTriaComensals setBackgroundView:imgFons];
+     
     tbTriaComensals.delegate = self;
     tbTriaComensals.dataSource = self;
     [scrollview addSubview:tbTriaComensals];
@@ -100,7 +105,16 @@
     
     seleccionComensales = [[NSMutableArray alloc] init];
     
+    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(amagaTeclat)];
+    [scrollview addGestureRecognizer:gesture];
+    gesture.cancelsTouchesInView = NO;
 
+}
+
+-(void)amagaTeclat{
+    
+    [txfMenu resignFirstResponder];
+    [txfPreuPerCap resignFirstResponder];
 }
 
 -(NSString *)plistPath{
@@ -187,6 +201,8 @@
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
+
+
 
 @end
 

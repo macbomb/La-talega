@@ -11,6 +11,7 @@
 
 @interface TaulaUsuarisViewControler : UITableViewController <NouUsuariDelegate>
 
+@property (strong, nonatomic) IBOutlet UITableView *tbViewUsuaris;
 
 - (IBAction)tornaInici:(UIBarButtonItem *)sender;
 
