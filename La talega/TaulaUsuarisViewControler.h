@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NouUsuariViewController.h"
 
-@interface TaulaUsuarisViewControler : UITableViewController <NouUsuariDelegate>
+@interface TaulaUsuarisViewControler : UITableViewController 
 
 @property (strong, nonatomic) IBOutlet UITableView *tbViewUsuaris;
 

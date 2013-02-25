@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NouUsuariViewController.h"
 
 @protocol NouDinarDelegate <NSObject>
 
@@ -14,7 +15,7 @@
 
 @end
 
-@interface NouDinarViewController : UIViewController <UITableViewDelegate>
+@interface NouDinarViewController : UIViewController <UITableViewDelegate, UIScrollViewDelegate, UITableViewDataSource, NouUsuariDelegate>
 
 @property (nonatomic, strong) id <NouDinarDelegate> delegate;
 

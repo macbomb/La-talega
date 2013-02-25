@@ -171,34 +171,34 @@
     }
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([segue.identifier isEqualToString:@"GoToNouUsuari"]) {
-        NouUsuariViewController * nouUsuariViewControler = (NouUsuariViewController*)segue.destinationViewController;
-        nouUsuariViewControler.delegate = self;
-    }
-}
+//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+//    if ([segue.identifier isEqualToString:@"GoToNouUsuari"]) {
+//        NouUsuariViewController * nouUsuariViewControler = (NouUsuariViewController*)segue.destinationViewController;
+//        nouUsuariViewControler.delegate = self;
+//    }
+//}
 
 - (IBAction)tornaInici:(UIBarButtonItem *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-#pragma mark - Metodo delegado
-
--(void)introNousUsuaris:(NSArray*)usuarisNous{
-    
-    for (int i = 0; i < usuarisNous.count; i++) {
-        [usuarisMutableArray addObject:[usuarisNous objectAtIndex:i]];
-        [self.tableView reloadData];
-    }
-    
-    [rootDictionary setObject:usuarisMutableArray forKey:@"usuaris"];
-    
-    NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:rootDictionary format:NSPropertyListBinaryFormat_v1_0 errorDescription:nil];
-    if (plistData) {
-        [plistData writeToFile:[self plistPath] atomically:YES];
-    }
-    
-}
+//#pragma mark - Metodo delegado
+//
+//-(void)introNousUsuaris:(NSArray*)usuarisNous{
+//    
+//    for (int i = 0; i < usuarisNous.count; i++) {
+//        [usuarisMutableArray addObject:[usuarisNous objectAtIndex:i]];
+//        [self.tableView reloadData];
+//    }
+//    
+//    [rootDictionary setObject:usuarisMutableArray forKey:@"usuaris"];
+//    
+//    NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:rootDictionary format:NSPropertyListBinaryFormat_v1_0 errorDescription:nil];
+//    if (plistData) {
+//        [plistData writeToFile:[self plistPath] atomically:YES];
+//    }
+//    
+//}
 
 @end
 

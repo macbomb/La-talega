@@ -82,12 +82,8 @@
 {
     
     // Return the number of rows in the section.
-    
-    if (dinarsMutableArray.count == 0) {
-        return 1;
-    }else{
-        return dinarsMutableArray.count;
-    }
+
+    return dinarsMutableArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -100,12 +96,8 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    
-    if (dinarsMutableArray.count == 0) {
-        
-        cell.textLabel.text = @"No hi ha cap dinar.";
-    }else{
-        
+    if (dinarsMutableArray.count > 0) {
+        cell.textLabel.text =nil;
         float nouIndex = (indexPath.row * -1) + [dinarsMutableArray count] - 1;
         NSMutableDictionary *dinarActualMutDict = [[NSMutableDictionary alloc] initWithDictionary:[dinarsMutableArray objectAtIndex:nouIndex]];
         
@@ -214,25 +206,27 @@
         if (plistData) {
             [plistData writeToFile:[self plistPath] atomically:YES];
         }
+        
         [tableView reloadData];
     }
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
     if ([segue.identifier isEqualToString:@"GoToNouDinar"]) {
         NouDinarViewController * nouDinarViewControler = (NouDinarViewController*)segue.destinationViewController;
         nouDinarViewControler.delegate = self;
         
     }
-    if (dinarsMutableArray.count > 0){
-        if ([segue.identifier isEqualToString:@"GoToDetall"]) {
-            UITableViewCell *cell = (UITableViewCell *)sender;
-            DetallDinarViewController *detallDinarViewControler = (DetallDinarViewController*)segue.destinationViewController;
-            detallDinarViewControler.delegate = self;
-            detallDinarViewControler.index = cell.tag;
-            
-        }
-    }
+//    if (dinarsMutableArray.count > 0){
+//        if ([segue.identifier isEqualToString:@"GoToDetall"]) {
+//            UITableViewCell *cell = (UITableViewCell *)sender;
+//            DetallDinarViewController *detallDinarViewControler = (DetallDinarViewController*)segue.destinationViewController;
+//            detallDinarViewControler.delegate = self;
+//            detallDinarViewControler.index = cell.tag;
+//            
+//        }
+//    }
 }
 
 - (IBAction)tornaInici:(UIBarButtonItem *)sender {

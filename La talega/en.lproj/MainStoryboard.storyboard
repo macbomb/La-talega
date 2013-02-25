@@ -105,7 +105,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="n1t-oh-TLu">
-                                <rect key="frame" x="20" y="132" width="280" height="303"/>
+                                <rect key="frame" x="20" y="177" width="280" height="258"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -227,11 +227,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Comensals" id="QSx-nH-jGy">
-                        <barButtonItem key="rightBarButtonItem" title="Nou" id="81C-kP-9cN">
-                            <connections>
-                                <segue destination="8Al-1p-Y7n" kind="modal" identifier="GoToNouUsuari" modalTransitionStyle="coverVertical" id="3SM-w2-O7C"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Nou" id="81C-kP-9cN"/>
                     </navigationItem>
                     <connections>
                         <outlet property="tbViewUsuaris" destination="ZzE-Dm-nkN" id="ezB-oT-IF1"/>
@@ -244,7 +240,7 @@
         <!--Nou Usuari View Controller-->
         <scene sceneID="izC-D1-bJR">
             <objects>
-                <viewController id="8Al-1p-Y7n" customClass="NouUsuariViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="nouComensalViewC" id="8Al-1p-Y7n" customClass="NouUsuariViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="78d-ih-j5j">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -324,6 +320,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="uv6-cN-wsZ"/>
                     <connections>
                         <outlet property="lbTotalNoms" destination="CDE-Pt-XGe" id="P9O-dl-d9K"/>
                         <outlet property="lbUltimNom" destination="KmW-Je-7Zx" id="jL7-0g-6yb"/>
@@ -332,7 +329,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nEh-Ky-Vu8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1633" y="-327"/>
+            <point key="canvasLocation" x="2046" y="-1042"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="aDl-Hg-g0v">
@@ -362,7 +359,7 @@
         <scene sceneID="6Wb-TP-Wbg">
             <objects>
                 <tabBarController definesPresentationContext="YES" id="pNi-3V-FMH" sceneMemberID="viewController">
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="TaK-33-391">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
