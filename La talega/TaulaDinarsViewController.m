@@ -213,27 +213,14 @@
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     
-    if ([segue.identifier isEqualToString:@"GoToNouDinar"]) {
-        NouDinarViewController * nouDinarViewControler = (NouDinarViewController*)segue.destinationViewController;
-        nouDinarViewControler.delegate = self;
+    if ([segue.identifier isEqualToString:@"GoToNouDinarVC"]) {
+        NouDinarVC *nouDinarVC = (NouDinarVC*)segue.destinationViewController;
+        nouDinarVC.delegate = self;
         
     }
-//    if (dinarsMutableArray.count > 0){
-//        if ([segue.identifier isEqualToString:@"GoToDetall"]) {
-//            UITableViewCell *cell = (UITableViewCell *)sender;
-//            DetallDinarViewController *detallDinarViewControler = (DetallDinarViewController*)segue.destinationViewController;
-//            detallDinarViewControler.delegate = self;
-//            detallDinarViewControler.index = cell.tag;
-//            
-//        }
-//    }
 }
 
-- (IBAction)tornaInici:(UIBarButtonItem *)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-#pragma mark - Metodo delegado
+#pragma mark - Metodes delegat
 
 -(void)introNouDinar:(NSDictionary *)dinarNou{
     

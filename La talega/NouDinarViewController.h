@@ -15,7 +15,7 @@
 
 @end
 
-@interface NouDinarViewController : UIViewController <UITableViewDelegate, UIScrollViewDelegate, UITableViewDataSource, NouUsuariDelegate>
+@interface NouDinarViewController : UIViewController <UITableViewDelegate, UIScrollViewDelegate, UITableViewDataSource, UITextFieldDelegate, NouUsuariDelegate>
 
 @property (nonatomic, strong) id <NouDinarDelegate> delegate;
 

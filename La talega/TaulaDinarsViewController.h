@@ -7,13 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NouDinarViewController.h"
 #import "DetallDinarViewController.h"
+#import "NouDinarVC.h"
 
-@interface TaulaDinarsViewController : UITableViewController <NouDinarDelegate, DetallDinarDelegate>
+@interface TaulaDinarsViewController : UITableViewController <NouDinarVCDelegate, DetallDinarDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *tbViewDinars;
 
-- (IBAction)tornaInici:(UIBarButtonItem *)sender;
 
 @end

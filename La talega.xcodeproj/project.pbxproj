@@ -20,6 +20,9 @@
 		210958D116D97E4200426771 /* DetallDinarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 210958D016D97E4100426771 /* DetallDinarViewController.m */; };
 		213F5E7816D3FD52005DFB59 /* usuaris.plist in Resources */ = {isa = PBXBuildFile; fileRef = 213F5E7716D3FD52005DFB59 /* usuaris.plist */; };
 		213F5E7F16D43167005DFB59 /* NouDinarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213F5E7E16D43167005DFB59 /* NouDinarViewController.m */; };
+		21E3F76C16DCE06700660C7A /* NouDinarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E3F76B16DCE06700660C7A /* NouDinarVC.m */; };
+		21E3F77016DD67C800660C7A /* noImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E3F76E16DD67C800660C7A /* noImg.png */; };
+		21E3F77116DD67C800660C7A /* noImg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E3F76F16DD67C800660C7A /* noImg@2x.png */; };
 		21FF887916D28FDF00CB5BF3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FF887816D28FDF00CB5BF3 /* UIKit.framework */; };
 		21FF887B16D28FDF00CB5BF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FF887A16D28FDF00CB5BF3 /* Foundation.framework */; };
 		21FF887D16D28FDF00CB5BF3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FF887C16D28FDF00CB5BF3 /* CoreGraphics.framework */; };
@@ -69,6 +72,10 @@
 		213F5E7716D3FD52005DFB59 /* usuaris.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = usuaris.plist; sourceTree = "<group>"; };
 		213F5E7D16D43167005DFB59 /* NouDinarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NouDinarViewController.h; sourceTree = "<group>"; };
 		213F5E7E16D43167005DFB59 /* NouDinarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NouDinarViewController.m; sourceTree = "<group>"; };
+		21E3F76A16DCE06700660C7A /* NouDinarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NouDinarVC.h; sourceTree = "<group>"; };
+		21E3F76B16DCE06700660C7A /* NouDinarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NouDinarVC.m; sourceTree = "<group>"; };
+		21E3F76E16DD67C800660C7A /* noImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noImg.png; sourceTree = "<group>"; };
+		21E3F76F16DD67C800660C7A /* noImg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noImg@2x.png"; sourceTree = "<group>"; };
 		21FF887516D28FDF00CB5BF3 /* La talega.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "La talega.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21FF887816D28FDF00CB5BF3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		21FF887A16D28FDF00CB5BF3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -141,11 +148,23 @@
 				213F5E7E16D43167005DFB59 /* NouDinarViewController.m */,
 			);
 			name = NouDinar;
+			path = "La talega";
+			sourceTree = "<group>";
+		};
+		21E3F76D16DCE06B00660C7A /* NouDinarVC */ = {
+			isa = PBXGroup;
+			children = (
+				21E3F76A16DCE06700660C7A /* NouDinarVC.h */,
+				21E3F76B16DCE06700660C7A /* NouDinarVC.m */,
+			);
+			name = NouDinarVC;
 			sourceTree = "<group>";
 		};
 		21FF886C16D28FDF00CB5BF3 = {
 			isa = PBXGroup;
 			children = (
+				213F5E8016D4316A005DFB59 /* NouDinar */,
+				21FF88C316D2D48C00CB5BF3 /* TaulaUsuaris */,
 				210958B216D59FD900426771 /* latalegaBD.plist */,
 				213F5E7716D3FD52005DFB59 /* usuaris.plist */,
 				21FF887E16D28FDF00CB5BF3 /* La talega */,
@@ -180,9 +199,8 @@
 				21FF889016D28FDF00CB5BF3 /* MainStoryboard.storyboard */,
 				21FF88C416D2D49A00CB5BF3 /* Main */,
 				21FF88CC16D2DC7B00CB5BF3 /* NouUsuari */,
-				21FF88C316D2D48C00CB5BF3 /* TaulaUsuaris */,
 				21FF88C816D2D58A00CB5BF3 /* TaulaDinars */,
-				213F5E8016D4316A005DFB59 /* NouDinar */,
+				21E3F76D16DCE06B00660C7A /* NouDinarVC */,
 				210958D216D97E5700426771 /* DetallDinar */,
 				21FF88BF16D2C02000CB5BF3 /* imatges */,
 				21FF887F16D28FDF00CB5BF3 /* Supporting Files */,
@@ -213,6 +231,8 @@
 				21FF88D216D2E43900CB5BF3 /* bt_ok@2x.png */,
 				21FF88D916D2EB6D00CB5BF3 /* bt_cancel.png */,
 				21FF88DA16D2EB6D00CB5BF3 /* bt_cancel@2x.png */,
+				21E3F76E16DD67C800660C7A /* noImg.png */,
+				21E3F76F16DD67C800660C7A /* noImg@2x.png */,
 				21FF88A316D2B61900CB5BF3 /* calendari.png */,
 				21FF88A416D2B61900CB5BF3 /* calendari@2x.png */,
 				21FF88D516D2E80900CB5BF3 /* celda.png */,
@@ -244,6 +264,7 @@
 				21FF88C116D2C13800CB5BF3 /* TaulaUsuarisViewControler.m */,
 			);
 			name = TaulaUsuaris;
+			path = "La talega";
 			sourceTree = "<group>";
 		};
 		21FF88C416D2D49A00CB5BF3 /* Main */ = {
@@ -357,6 +378,8 @@
 				210958CC16D8505B00426771 /* fondoNull2-568h@2x.png in Resources */,
 				210958CD16D8505B00426771 /* fondoNull2.png in Resources */,
 				210958CE16D8505B00426771 /* fondoNull2@2x.png in Resources */,
+				21E3F77016DD67C800660C7A /* noImg.png in Resources */,
+				21E3F77116DD67C800660C7A /* noImg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +398,7 @@
 				21FF88CB16D2DC7300CB5BF3 /* NouUsuariViewController.m in Sources */,
 				213F5E7F16D43167005DFB59 /* NouDinarViewController.m in Sources */,
 				210958D116D97E4200426771 /* DetallDinarViewController.m in Sources */,
+				21E3F76C16DCE06700660C7A /* NouDinarVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -14,14 +14,18 @@
     NSString *stringAra;
     NSDateFormatter *formatData;
     UITableView *tbTriaComensals;
-    UIScrollView *scrollview;
     UILabel *lbData;
     UITextField *txfMenu;
-    UITextField *txfPreuPerCap;
+    UITextField *txfPreutotal;
+    UILabel *lbPreuPerCap;
     UIButton *btMesComensals;
     NSMutableArray *usuarisMutableArray;
     NSMutableDictionary *rootDictionary;
-    NSMutableArray *seleccionComensales;
+    NSMutableString *menuDinarNou;
+    NSMutableString *preuPerCapNou;
+    
+    float preuPerCap;
+    int comensalsTriats;
 }
 
 @end
@@ -44,10 +48,8 @@
 	// Do any additional setup after loading the view.
     
     CGRect screen = [[UIScreen mainScreen]bounds];
-//    scrollview = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 44, 320, CGRectGetHeight(screen)-44)];
-//    scrollview.backgroundColor = [UIColor clearColor];
-//    scrollview.delegate = self;
-//    [self.view addSubview:scrollview];
+    
+    preuPerCap = 0.0;
     
     if ([[NSFileManager defaultManager] fileExistsAtPath:[self plistPath]]) {
         
@@ -58,25 +60,11 @@
         rootDictionary = [[NSMutableDictionary alloc] init];
         usuarisMutableArray = [[NSMutableArray alloc] init];
     }
-//    CGRect rectTbComensals;
-//    if ([usuarisMutableArray count]>8) {
-//        rectTbComensals = CGRectMake(0, 0, 320, [usuarisMutableArray count] * 50 +200);
-//    }else {
-//        rectTbComensals = CGRectMake(0, 0, 320, 568);
-//    }
     tbTriaComensals = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, 320, CGRectGetHeight(screen)-50) style:UITableViewStyleGrouped];
     [tbTriaComensals setBackgroundColor:[UIColor clearColor]];
     tbTriaComensals.opaque = NO;
     tbTriaComensals.scrollEnabled = YES;
-//    tbTriaComensals.sectionHeaderHeight = 10;
-//    tbTriaComensals.sectionFooterHeight = 40;
-//    scrollview.contentSize = CGSizeMake(320, tbTriaComensals.frame.size.height);
     tbTriaComensals.allowsMultipleSelection = YES;
-    
-//    UIImageView *imgFons = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fondoNull2.png"]];
-//    [tbTriaComensals addSubview:imgFons];
-//    [tbTriaComensals setBackgroundView:imgFons];
-    
     tbTriaComensals.delegate = self;
     tbTriaComensals.dataSource = self;
     [self.view addSubview:tbTriaComensals];
@@ -87,22 +75,16 @@
 //    lbData.textColor = [UIColor whiteColor];
 //    [lbData setFont:[UIFont fontWithName:@"Avenir-Black" size:24]];
 //    
-//    formatData = [[NSDateFormatter alloc] init];
-//    [formatData setDateFormat:@"dd-MMM-YYYY"];
-//    ara = [NSDate date];
-//    stringAra = [formatData stringFromDate:ara];
+
 //    lbData.text = stringAra;
-//    [scrollview addSubview:lbData];
 //    
-//    txfMenu = [[UITextField alloc] initWithFrame:CGRectMake(20, 60, 280, 30)];
+//    txfMenu = [[UITextField alloc] initWithFrame:CGRectMake(10, 60, 260, 30)];
 //    txfMenu.placeholder = @"Menú del dia";
 //    txfMenu.borderStyle = UITextBorderStyleRoundedRect;
-//    [scrollview addSubview:txfMenu];
 //    
 //    txfPreuPerCap = [[UITextField alloc] initWithFrame:CGRectMake(20, 100, 100, 30)];
 //    txfPreuPerCap.placeholder = @"Preu per cap";
 //    txfPreuPerCap.borderStyle = UITextBorderStyleRoundedRect;
-//    [scrollview addSubview:txfPreuPerCap];
 //    
 //    UILabel *lbTitol = [[UILabel alloc] initWithFrame:CGRectMake(20, 150, 280, 21)];
 //    lbTitol.textColor = [UIColor whiteColor];
@@ -110,20 +92,17 @@
 //    lbTitol.textAlignment = NSTextAlignmentLeft;
 //    [lbTitol setFont:[UIFont fontWithName:@"Avenir-Black" size:20]];
 //    lbTitol.text = @"Tria els comensals:";
-//    [scrollview addSubview:lbTitol];
     
-    seleccionComensales = [[NSMutableArray alloc] init];
-    
-//    UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(amagaTeclat)];
-//    [scrollview addGestureRecognizer:gesture];
-//    gesture.cancelsTouchesInView = NO;
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(amagaTeclat)];
+    [self.view addGestureRecognizer:gestureRecognizer];
+    gestureRecognizer.cancelsTouchesInView = NO;
 
 }
 
 -(void)amagaTeclat{
     
     [txfMenu resignFirstResponder];
-    [txfPreuPerCap resignFirstResponder];
+    [txfPreutotal resignFirstResponder];
 }
 
 -(NSString *)plistPath{
@@ -143,18 +122,19 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    int valor;
     switch (section) {
         case 0:
-            return 3;
+            valor = 4;
             break;
         case 1:
-            return usuarisMutableArray.count;
+            valor = usuarisMutableArray.count;
             break;
-        default:
-            return 1;
+        case 2:
+            valor = 1;
             break;
     }
-
+    return valor;
 }
 
 -(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -171,40 +151,114 @@
         case 1:
             titolSeccio = [NSString stringWithFormat:@"Tria els comensals"];
             break;
-            
-        default:
+        case 2:
             titolSeccio = [NSString stringWithFormat:@""];
             break;
     }
     return titolSeccio;
 }
 
--(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
-    
-}
-
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    static NSString *CellIdentifier = @"CellUser";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
-    
+    static NSString *CellIdCelaCero = @"CellIdCelaCero";
+    static NSString *CellIdCelaU = @"CellIdCelaU";
+    static NSString *CellIdCelaDos = @"CellIdCelaDos";
+    static NSString *CellIdCelaTres = @"CellIdCelaTres";
+    static NSString *CellIdCelaQuatre = @"CellIdCelaQuatre";
+    static NSString *CellIdCelaCinq = @"CellIdCelaCinq";
+    UITableViewCell *cell = nil;
     switch (indexPath.section) {
         case 0:
-            cell.textLabel.text = @"text";
+            switch (indexPath.row) {
+                case 0:
+                    cell = [tableView dequeueReusableCellWithIdentifier:CellIdCelaCero];
+                    if (cell == nil) {
+                        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdCelaCero];
+                    }
+                    formatData = [[NSDateFormatter alloc] init];
+                    [formatData setDateFormat:@"dd-MMM-YYYY"];
+                    ara = [NSDate date];
+                    stringAra = [formatData stringFromDate:ara];
+                    cell.textLabel.text = stringAra;
+                    break;
+                case 1:
+                    
+                    cell = [tableView dequeueReusableCellWithIdentifier:CellIdCelaU];
+                    if (cell == nil) {
+                        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdCelaU];
+                    }
+                    cell.textLabel.text = @"Menu";
+                    txfMenu = [[UITextField alloc] initWithFrame:CGRectMake(80, 10, 220, 30)];
+                    txfMenu.backgroundColor = [UIColor clearColor];
+                    txfMenu.autocapitalizationType = UITextAutocapitalizationTypeSentences;
+                    txfMenu.textAlignment = NSTextAlignmentLeft;
+                    txfMenu.textColor = [UIColor blueColor];
+                    txfMenu.placeholder = @"Menu del dia";
+                    txfMenu.returnKeyType = UIReturnKeyDefault;
+                    txfMenu.delegate = self;
+                    [cell addSubview:txfMenu];
+                    break;
+                case 2:
+                    
+                    cell = [tableView dequeueReusableCellWithIdentifier:CellIdCelaDos];
+                    if (cell == nil) {
+                        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdCelaDos];
+                    }
+                    cell.textLabel.text = @"Preu total";
+                    txfPreutotal = [[UITextField alloc] initWithFrame:CGRectMake(120, 10, 100, 30)];
+                    txfPreutotal.backgroundColor = [UIColor clearColor];
+                    txfPreutotal.autocapitalizationType = UITextAutocapitalizationTypeSentences;
+                    txfPreutotal.textAlignment = NSTextAlignmentLeft;
+                    txfPreutotal.textColor = [UIColor blueColor];
+                    txfPreutotal.placeholder = @"Preu total";
+                    txfPreutotal.keyboardType = UIKeyboardTypeDecimalPad;
+                    txfPreutotal.delegate = self;
+                    txfPreutotal.tag = 99;
+                    [cell addSubview:txfPreutotal];
+                    break;
+                case 3:
+                    
+                    cell = [tableView dequeueReusableCellWithIdentifier:CellIdCelaTres];
+                    if (cell == nil) {
+                        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdCelaTres];
+                    }
+                    lbPreuPerCap = [[UILabel alloc] initWithFrame:CGRectMake(200, 2, 100, 40)];
+                    [lbPreuPerCap setFont:[UIFont fontWithName:@"Avenir-Black" size:27]];
+                    lbPreuPerCap.backgroundColor = [UIColor clearColor];
+                    lbPreuPerCap.textColor = [UIColor colorWithRed:0.58984375 green:0.19921875 blue:0.19921875 alpha:1];
+                    lbPreuPerCap.textAlignment = NSTextAlignmentRight;
+                    lbPreuPerCap.text = [NSString stringWithFormat:@"%.02f €",preuPerCap];
+                    [cell addSubview:lbPreuPerCap];
+                    cell.textLabel.text = @"Preu per cap";
+                    
+                    break;
+            }
             cell.tag = indexPath.row;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
             break;
             
         case 1:
+            
+            cell = [tableView dequeueReusableCellWithIdentifier:CellIdCelaQuatre];
+            if (cell == nil) {
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdCelaQuatre];
+            }
             cell.textLabel.text = [usuarisMutableArray objectAtIndex:indexPath.row];
             cell.tag = indexPath.row;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             break;
             
         default:
+            
+            cell = [tableView dequeueReusableCellWithIdentifier:CellIdCelaCinq];
+            if (cell == nil) {
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdCelaCinq];
+            }
             cell.textLabel.text = @"Nou comensal";
             cell.tag = indexPath.row;
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+            
             break;
     }
     
@@ -213,17 +267,12 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    NSMutableDictionary *nouComDict;
-    NSString *nom;
     UIStoryboard *storyboard;
     switch (indexPath.section) {
         case 1:
-            
-            nom = [usuarisMutableArray objectAtIndex:indexPath.row];
-            nouComDict = [[NSMutableDictionary alloc]init];
-            [nouComDict setObject:nom forKey:@"nom"];
-            [nouComDict setObject:@"0" forKey:@"pagatParcial"];
-            [nouComDict setObject:@"NO" forKey:@"pagat"];
+            [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryCheckmark;
+            comensalsTriats ++ ;
+            [self calculaPreuPerCap];
             break;
             
         case 2:
@@ -239,7 +288,9 @@
 
 -(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 1) {
-        [seleccionComensales removeObject:[usuarisMutableArray objectAtIndex:indexPath.row]];
+        [tableView cellForRowAtIndexPath:indexPath].accessoryType = UITableViewCellAccessoryNone;
+        comensalsTriats -- ;
+        [self calculaPreuPerCap];
     }
 }
 
@@ -249,17 +300,16 @@
 
 - (IBAction)btFetPush:(id)sender {
     
-    NSString *preuPerCap = [txfPreuPerCap.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    NSString *preuTotal = [txfPreutotal.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     NSString *menu = [txfMenu.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     
-    if (preuPerCap.length > 0 && menu.length > 0) {
+    if (preuTotal.length > 0 && menu.length > 0) {
         
         NSMutableDictionary *nouDinarMutDict = [[NSMutableDictionary alloc] init];
         
         [nouDinarMutDict setObject:lbData.text forKey:@"data"];
-        [nouDinarMutDict setObject:preuPerCap forKey:@"preuCap"];
+        [nouDinarMutDict setObject:preuTotal forKey:@"preuTotal"];
         [nouDinarMutDict setObject:menu forKey:@"menu"];
-        [nouDinarMutDict setObject:seleccionComensales forKey:@"comensals"];
         
         [self.delegate introNouDinar:nouDinarMutDict];
         [self dismissViewControllerAnimated:YES completion:nil];
@@ -269,6 +319,9 @@
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 1) {
         
+        if ([tableView cellForRowAtIndexPath:indexPath].accessoryType == UITableViewCellAccessoryCheckmark ) {
+            comensalsTriats -- ;
+        }
         [usuarisMutableArray removeObjectAtIndex:indexPath.row];
         [rootDictionary setObject:usuarisMutableArray forKey:@"usuaris"];
         
@@ -276,8 +329,25 @@
         if (plistData) {
             [plistData writeToFile:[self plistPath] atomically:YES];
         }
+        [self calculaPreuPerCap];
         [tableView reloadData];
         
+    }
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    if (textField.tag == 99) {
+        [self calculaPreuPerCap];
+        
+    }
+}
+
+-(void)calculaPreuPerCap{
+    
+    if (txfPreutotal.text.length >0 && comensalsTriats > 0) {
+        float preuTotal = [txfPreutotal.text floatValue];
+        
+        preuPerCap = preuTotal / comensalsTriats;
     }
 }
 
@@ -300,7 +370,12 @@
     }
 }
 
+#pragma mark - Gestion teclado
 
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return NO;
+}
 @end
 
 
