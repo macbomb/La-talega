@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DetallDinarViewController.h"
+#import <QuartzCore/QuartzCore.h>
 #import "NouDinarVC.h"
+#import "DetallDinarsTbViewControler.h"
+#import "DetallDinarVC.h"
 
-@interface TaulaDinarsViewController : UITableViewController <NouDinarVCDelegate, DetallDinarDelegate>
+@interface TaulaDinarsViewController : UITableViewController
 
 @property (strong, nonatomic) IBOutlet UITableView *tbViewDinars;
 

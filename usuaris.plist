@@ -27,54 +27,6 @@
 					<key>nomComensal</key>
 					<string></string>
 					<key>pagat</key>
-					<false/>
-					<key>pagatParcial</key>
-					<integer>0</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>data</key>
-			<date>2013-02-21T11:38:52Z</date>
-			<key>preuTot</key>
-			<integer>0</integer>
-			<key>preuCap</key>
-			<integer>0</integer>
-			<key>menu</key>
-			<string></string>
-			<key>imatge</key>
-			<string></string>
-			<key>comensals</key>
-			<array>
-				<dict>
-					<key>nomComensal</key>
-					<string></string>
-					<key>pagat</key>
-					<false/>
-					<key>pagatParcial</key>
-					<integer>0</integer>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>data</key>
-			<date>2013-02-21T11:38:52Z</date>
-			<key>preuTot</key>
-			<integer>0</integer>
-			<key>preuCap</key>
-			<integer>0</integer>
-			<key>menu</key>
-			<string></string>
-			<key>imatge</key>
-			<string></string>
-			<key>comensals</key>
-			<array>
-				<dict>
-					<key>nomComensal</key>
-					<string></string>
-					<key>pagat</key>
-					<false/>
-					<key>pagatParcial</key>
 					<integer>0</integer>
 				</dict>
 			</array>

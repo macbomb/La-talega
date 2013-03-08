@@ -7,18 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NouUsuariViewController.h"
 
-@protocol NouDinarVCDelegate <NSObject>
-
--(void)introNouDinar:(NSDictionary*)dinarNou;
-
-@end
-
-@interface NouDinarVC : UITableViewController <NouUsuariDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface NouDinarVC : UITableViewController < UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tbNouDinar;
-
-@property (nonatomic, strong) id <NouDinarVCDelegate> delegate;
 
 - (IBAction)introNouDinar:(UIBarButtonItem *)sender;
 - (IBAction)cancelaNouDinar:(UIBarButtonItem *)sender;

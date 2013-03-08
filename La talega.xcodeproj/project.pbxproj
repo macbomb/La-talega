@@ -10,19 +10,25 @@
 		210958B316D59FD900426771 /* latalegaBD.plist in Resources */ = {isa = PBXBuildFile; fileRef = 210958B216D59FD900426771 /* latalegaBD.plist */; };
 		210958BA16D649A500426771 /* cercleBlau.png in Resources */ = {isa = PBXBuildFile; fileRef = 210958B416D649A500426771 /* cercleBlau.png */; };
 		210958BB16D649A500426771 /* cercleBlau@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 210958B516D649A500426771 /* cercleBlau@2x.png */; };
-		210958BC16D649A500426771 /* cercleRoig.png in Resources */ = {isa = PBXBuildFile; fileRef = 210958B616D649A500426771 /* cercleRoig.png */; };
-		210958BD16D649A500426771 /* cercleRoig@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 210958B716D649A500426771 /* cercleRoig@2x.png */; };
 		210958BE16D649A500426771 /* cercleVerd.png in Resources */ = {isa = PBXBuildFile; fileRef = 210958B816D649A500426771 /* cercleVerd.png */; };
 		210958BF16D649A500426771 /* cercleVerd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 210958B916D649A500426771 /* cercleVerd@2x.png */; };
 		210958CC16D8505B00426771 /* fondoNull2-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 210958C916D8505A00426771 /* fondoNull2-568h@2x.png */; };
 		210958CD16D8505B00426771 /* fondoNull2.png in Resources */ = {isa = PBXBuildFile; fileRef = 210958CA16D8505B00426771 /* fondoNull2.png */; };
 		210958CE16D8505B00426771 /* fondoNull2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 210958CB16D8505B00426771 /* fondoNull2@2x.png */; };
-		210958D116D97E4200426771 /* DetallDinarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 210958D016D97E4100426771 /* DetallDinarViewController.m */; };
 		213F5E7816D3FD52005DFB59 /* usuaris.plist in Resources */ = {isa = PBXBuildFile; fileRef = 213F5E7716D3FD52005DFB59 /* usuaris.plist */; };
-		213F5E7F16D43167005DFB59 /* NouDinarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 213F5E7E16D43167005DFB59 /* NouDinarViewController.m */; };
+		21D3298116E4F52700B72D87 /* DetallDinarsTbViewControler.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D3298016E4F52700B72D87 /* DetallDinarsTbViewControler.m */; };
+		21D3298816E6250C00B72D87 /* DetallDinarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D3298716E6250C00B72D87 /* DetallDinarVC.m */; };
+		21D3298C16E67A6E00B72D87 /* PagamentsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21D3298B16E67A6E00B72D87 /* PagamentsVC.m */; };
 		21E3F76C16DCE06700660C7A /* NouDinarVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E3F76B16DCE06700660C7A /* NouDinarVC.m */; };
 		21E3F77016DD67C800660C7A /* noImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E3F76E16DD67C800660C7A /* noImg.png */; };
 		21E3F77116DD67C800660C7A /* noImg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21E3F76F16DD67C800660C7A /* noImg@2x.png */; };
+		21EC955716E6C25000AE6BB7 /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21EC955616E6C25000AE6BB7 /* TPKeyboardAvoidingTableView.m */; };
+		21F1953C16E026F300E62AF2 /* cercleRoig.png in Resources */ = {isa = PBXBuildFile; fileRef = 21F1953A16E026F300E62AF2 /* cercleRoig.png */; };
+		21F1953D16E026F300E62AF2 /* cercleRoig@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21F1953B16E026F300E62AF2 /* cercleRoig@2x.png */; };
+		21F1953E16E0301A00E62AF2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88E716D2F35200CB5BF3 /* Default-568h@2x.png */; };
+		21F1953F16E0302300E62AF2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88E916D2F35600CB5BF3 /* Default@2x.png */; };
+		21F1954016E0302A00E62AF2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88EB16D2F35B00CB5BF3 /* Default.png */; };
+		21F1954216E1485100E62AF2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21F1954116E1485100E62AF2 /* QuartzCore.framework */; };
 		21FF887916D28FDF00CB5BF3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FF887816D28FDF00CB5BF3 /* UIKit.framework */; };
 		21FF887B16D28FDF00CB5BF3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FF887A16D28FDF00CB5BF3 /* Foundation.framework */; };
 		21FF887D16D28FDF00CB5BF3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21FF887C16D28FDF00CB5BF3 /* CoreGraphics.framework */; };
@@ -39,7 +45,6 @@
 		21FF88AE16D2B61900CB5BF3 /* user@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88A816D2B61900CB5BF3 /* user@2x.png */; };
 		21FF88C216D2C13800CB5BF3 /* TaulaUsuarisViewControler.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF88C116D2C13800CB5BF3 /* TaulaUsuarisViewControler.m */; };
 		21FF88C716D2D4BD00CB5BF3 /* TaulaDinarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF88C616D2D4BD00CB5BF3 /* TaulaDinarsViewController.m */; };
-		21FF88CB16D2DC7300CB5BF3 /* NouUsuariViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21FF88CA16D2DC7300CB5BF3 /* NouUsuariViewController.m */; };
 		21FF88D316D2E43900CB5BF3 /* bt_ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88D116D2E43900CB5BF3 /* bt_ok.png */; };
 		21FF88D416D2E43900CB5BF3 /* bt_ok@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88D216D2E43900CB5BF3 /* bt_ok@2x.png */; };
 		21FF88D716D2E80900CB5BF3 /* celda.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88D516D2E80900CB5BF3 /* celda.png */; };
@@ -48,9 +53,6 @@
 		21FF88DC16D2EB6E00CB5BF3 /* bt_cancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88DA16D2EB6D00CB5BF3 /* bt_cancel@2x.png */; };
 		21FF88E416D2F1EA00CB5BF3 /* icoApp.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88E316D2F1EA00CB5BF3 /* icoApp.png */; };
 		21FF88E616D2F1ED00CB5BF3 /* icoApp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88E516D2F1ED00CB5BF3 /* icoApp@2x.png */; };
-		21FF88E816D2F35200CB5BF3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88E716D2F35200CB5BF3 /* Default-568h@2x.png */; };
-		21FF88EA16D2F35600CB5BF3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88E916D2F35600CB5BF3 /* Default@2x.png */; };
-		21FF88EC16D2F35B00CB5BF3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88EB16D2F35B00CB5BF3 /* Default.png */; };
 		21FF88F016D2F36F00CB5BF3 /* fondo-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88ED16D2F36E00CB5BF3 /* fondo-568h@2x.png */; };
 		21FF88F116D2F36F00CB5BF3 /* fondo.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88EE16D2F36E00CB5BF3 /* fondo.png */; };
 		21FF88F216D2F36F00CB5BF3 /* fondo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 21FF88EF16D2F36E00CB5BF3 /* fondo@2x.png */; };
@@ -60,22 +62,27 @@
 		210958B216D59FD900426771 /* latalegaBD.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = latalegaBD.plist; sourceTree = "<group>"; };
 		210958B416D649A500426771 /* cercleBlau.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cercleBlau.png; sourceTree = "<group>"; };
 		210958B516D649A500426771 /* cercleBlau@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cercleBlau@2x.png"; sourceTree = "<group>"; };
-		210958B616D649A500426771 /* cercleRoig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cercleRoig.png; sourceTree = "<group>"; };
-		210958B716D649A500426771 /* cercleRoig@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cercleRoig@2x.png"; sourceTree = "<group>"; };
 		210958B816D649A500426771 /* cercleVerd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cercleVerd.png; sourceTree = "<group>"; };
 		210958B916D649A500426771 /* cercleVerd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cercleVerd@2x.png"; sourceTree = "<group>"; };
 		210958C916D8505A00426771 /* fondoNull2-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fondoNull2-568h@2x.png"; sourceTree = "<group>"; };
 		210958CA16D8505B00426771 /* fondoNull2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fondoNull2.png; sourceTree = "<group>"; };
 		210958CB16D8505B00426771 /* fondoNull2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fondoNull2@2x.png"; sourceTree = "<group>"; };
-		210958CF16D97E4100426771 /* DetallDinarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetallDinarViewController.h; path = "La talega/DetallDinarViewController.h"; sourceTree = "<group>"; };
-		210958D016D97E4100426771 /* DetallDinarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetallDinarViewController.m; path = "La talega/DetallDinarViewController.m"; sourceTree = "<group>"; };
 		213F5E7716D3FD52005DFB59 /* usuaris.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = usuaris.plist; sourceTree = "<group>"; };
-		213F5E7D16D43167005DFB59 /* NouDinarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NouDinarViewController.h; sourceTree = "<group>"; };
-		213F5E7E16D43167005DFB59 /* NouDinarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NouDinarViewController.m; sourceTree = "<group>"; };
+		21D3297F16E4F52700B72D87 /* DetallDinarsTbViewControler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetallDinarsTbViewControler.h; sourceTree = "<group>"; };
+		21D3298016E4F52700B72D87 /* DetallDinarsTbViewControler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetallDinarsTbViewControler.m; sourceTree = "<group>"; };
+		21D3298616E6250C00B72D87 /* DetallDinarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetallDinarVC.h; sourceTree = "<group>"; };
+		21D3298716E6250C00B72D87 /* DetallDinarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetallDinarVC.m; sourceTree = "<group>"; };
+		21D3298A16E67A6E00B72D87 /* PagamentsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PagamentsVC.h; sourceTree = "<group>"; };
+		21D3298B16E67A6E00B72D87 /* PagamentsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PagamentsVC.m; sourceTree = "<group>"; };
 		21E3F76A16DCE06700660C7A /* NouDinarVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NouDinarVC.h; sourceTree = "<group>"; };
 		21E3F76B16DCE06700660C7A /* NouDinarVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NouDinarVC.m; sourceTree = "<group>"; };
 		21E3F76E16DD67C800660C7A /* noImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noImg.png; sourceTree = "<group>"; };
 		21E3F76F16DD67C800660C7A /* noImg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noImg@2x.png"; sourceTree = "<group>"; };
+		21EC955516E6C25000AE6BB7 /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		21EC955616E6C25000AE6BB7 /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		21F1953A16E026F300E62AF2 /* cercleRoig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cercleRoig.png; sourceTree = "<group>"; };
+		21F1953B16E026F300E62AF2 /* cercleRoig@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cercleRoig@2x.png"; sourceTree = "<group>"; };
+		21F1954116E1485100E62AF2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		21FF887516D28FDF00CB5BF3 /* La talega.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "La talega.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21FF887816D28FDF00CB5BF3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		21FF887A16D28FDF00CB5BF3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -99,8 +106,6 @@
 		21FF88C116D2C13800CB5BF3 /* TaulaUsuarisViewControler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaulaUsuarisViewControler.m; sourceTree = "<group>"; };
 		21FF88C516D2D4BD00CB5BF3 /* TaulaDinarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaulaDinarsViewController.h; sourceTree = "<group>"; };
 		21FF88C616D2D4BD00CB5BF3 /* TaulaDinarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaulaDinarsViewController.m; sourceTree = "<group>"; };
-		21FF88C916D2DC7300CB5BF3 /* NouUsuariViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NouUsuariViewController.h; sourceTree = "<group>"; };
-		21FF88CA16D2DC7300CB5BF3 /* NouUsuariViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NouUsuariViewController.m; sourceTree = "<group>"; };
 		21FF88D116D2E43900CB5BF3 /* bt_ok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bt_ok.png; sourceTree = "<group>"; };
 		21FF88D216D2E43900CB5BF3 /* bt_ok@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bt_ok@2x.png"; sourceTree = "<group>"; };
 		21FF88D516D2E80900CB5BF3 /* celda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = celda.png; sourceTree = "<group>"; };
@@ -122,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21F1954216E1485100E62AF2 /* QuartzCore.framework in Frameworks */,
 				21FF887916D28FDF00CB5BF3 /* UIKit.framework in Frameworks */,
 				21FF887B16D28FDF00CB5BF3 /* Foundation.framework in Frameworks */,
 				21FF887D16D28FDF00CB5BF3 /* CoreGraphics.framework in Frameworks */,
@@ -131,24 +137,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		210958D216D97E5700426771 /* DetallDinar */ = {
+		21D3298216E4F52D00B72D87 /* DetallDinarsVC */ = {
 			isa = PBXGroup;
 			children = (
-				210958CF16D97E4100426771 /* DetallDinarViewController.h */,
-				210958D016D97E4100426771 /* DetallDinarViewController.m */,
+				21D3297F16E4F52700B72D87 /* DetallDinarsTbViewControler.h */,
+				21D3298016E4F52700B72D87 /* DetallDinarsTbViewControler.m */,
 			);
-			name = DetallDinar;
-			path = ..;
+			name = DetallDinarsVC;
+			path = "La talega";
 			sourceTree = "<group>";
 		};
-		213F5E8016D4316A005DFB59 /* NouDinar */ = {
+		21D3298916E6251D00B72D87 /* DetallDinarVC */ = {
 			isa = PBXGroup;
 			children = (
-				213F5E7D16D43167005DFB59 /* NouDinarViewController.h */,
-				213F5E7E16D43167005DFB59 /* NouDinarViewController.m */,
+				21D3298616E6250C00B72D87 /* DetallDinarVC.h */,
+				21D3298716E6250C00B72D87 /* DetallDinarVC.m */,
 			);
-			name = NouDinar;
-			path = "La talega";
+			name = DetallDinarVC;
+			sourceTree = "<group>";
+		};
+		21D3298D16E67A7400B72D87 /* PagamentsVC */ = {
+			isa = PBXGroup;
+			children = (
+				21D3298A16E67A6E00B72D87 /* PagamentsVC.h */,
+				21D3298B16E67A6E00B72D87 /* PagamentsVC.m */,
+			);
+			name = PagamentsVC;
 			sourceTree = "<group>";
 		};
 		21E3F76D16DCE06B00660C7A /* NouDinarVC */ = {
@@ -160,10 +174,19 @@
 			name = NouDinarVC;
 			sourceTree = "<group>";
 		};
+		21EC955816E6C25700AE6BB7 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				21EC955516E6C25000AE6BB7 /* TPKeyboardAvoidingTableView.h */,
+				21EC955616E6C25000AE6BB7 /* TPKeyboardAvoidingTableView.m */,
+			);
+			name = Keyboard;
+			sourceTree = "<group>";
+		};
 		21FF886C16D28FDF00CB5BF3 = {
 			isa = PBXGroup;
 			children = (
-				213F5E8016D4316A005DFB59 /* NouDinar */,
+				21D3298216E4F52D00B72D87 /* DetallDinarsVC */,
 				21FF88C316D2D48C00CB5BF3 /* TaulaUsuaris */,
 				210958B216D59FD900426771 /* latalegaBD.plist */,
 				213F5E7716D3FD52005DFB59 /* usuaris.plist */,
@@ -184,6 +207,7 @@
 		21FF887716D28FDF00CB5BF3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				21F1954116E1485100E62AF2 /* QuartzCore.framework */,
 				21FF887816D28FDF00CB5BF3 /* UIKit.framework */,
 				21FF887A16D28FDF00CB5BF3 /* Foundation.framework */,
 				21FF887C16D28FDF00CB5BF3 /* CoreGraphics.framework */,
@@ -194,14 +218,15 @@
 		21FF887E16D28FDF00CB5BF3 /* La talega */ = {
 			isa = PBXGroup;
 			children = (
+				21EC955816E6C25700AE6BB7 /* Keyboard */,
 				21FF888716D28FDF00CB5BF3 /* AppDelegate.h */,
 				21FF888816D28FDF00CB5BF3 /* AppDelegate.m */,
 				21FF889016D28FDF00CB5BF3 /* MainStoryboard.storyboard */,
 				21FF88C416D2D49A00CB5BF3 /* Main */,
-				21FF88CC16D2DC7B00CB5BF3 /* NouUsuari */,
 				21FF88C816D2D58A00CB5BF3 /* TaulaDinars */,
 				21E3F76D16DCE06B00660C7A /* NouDinarVC */,
-				210958D216D97E5700426771 /* DetallDinar */,
+				21D3298916E6251D00B72D87 /* DetallDinarVC */,
+				21D3298D16E67A7400B72D87 /* PagamentsVC */,
 				21FF88BF16D2C02000CB5BF3 /* imatges */,
 				21FF887F16D28FDF00CB5BF3 /* Supporting Files */,
 			);
@@ -237,10 +262,10 @@
 				21FF88A416D2B61900CB5BF3 /* calendari@2x.png */,
 				21FF88D516D2E80900CB5BF3 /* celda.png */,
 				21FF88D616D2E80900CB5BF3 /* celda@2x.png */,
+				21F1953A16E026F300E62AF2 /* cercleRoig.png */,
+				21F1953B16E026F300E62AF2 /* cercleRoig@2x.png */,
 				210958B416D649A500426771 /* cercleBlau.png */,
 				210958B516D649A500426771 /* cercleBlau@2x.png */,
-				210958B616D649A500426771 /* cercleRoig.png */,
-				210958B716D649A500426771 /* cercleRoig@2x.png */,
 				210958B816D649A500426771 /* cercleVerd.png */,
 				210958B916D649A500426771 /* cercleVerd@2x.png */,
 				21FF88A516D2B61900CB5BF3 /* titol.png */,
@@ -283,15 +308,6 @@
 				21FF88C616D2D4BD00CB5BF3 /* TaulaDinarsViewController.m */,
 			);
 			name = TaulaDinars;
-			sourceTree = "<group>";
-		};
-		21FF88CC16D2DC7B00CB5BF3 /* NouUsuari */ = {
-			isa = PBXGroup;
-			children = (
-				21FF88C916D2DC7300CB5BF3 /* NouUsuariViewController.h */,
-				21FF88CA16D2DC7300CB5BF3 /* NouUsuariViewController.m */,
-			);
-			name = NouUsuari;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,9 +377,6 @@
 				21FF88DC16D2EB6E00CB5BF3 /* bt_cancel@2x.png in Resources */,
 				21FF88E416D2F1EA00CB5BF3 /* icoApp.png in Resources */,
 				21FF88E616D2F1ED00CB5BF3 /* icoApp@2x.png in Resources */,
-				21FF88E816D2F35200CB5BF3 /* Default-568h@2x.png in Resources */,
-				21FF88EA16D2F35600CB5BF3 /* Default@2x.png in Resources */,
-				21FF88EC16D2F35B00CB5BF3 /* Default.png in Resources */,
 				21FF88F016D2F36F00CB5BF3 /* fondo-568h@2x.png in Resources */,
 				21FF88F116D2F36F00CB5BF3 /* fondo.png in Resources */,
 				21FF88F216D2F36F00CB5BF3 /* fondo@2x.png in Resources */,
@@ -371,8 +384,6 @@
 				210958B316D59FD900426771 /* latalegaBD.plist in Resources */,
 				210958BA16D649A500426771 /* cercleBlau.png in Resources */,
 				210958BB16D649A500426771 /* cercleBlau@2x.png in Resources */,
-				210958BC16D649A500426771 /* cercleRoig.png in Resources */,
-				210958BD16D649A500426771 /* cercleRoig@2x.png in Resources */,
 				210958BE16D649A500426771 /* cercleVerd.png in Resources */,
 				210958BF16D649A500426771 /* cercleVerd@2x.png in Resources */,
 				210958CC16D8505B00426771 /* fondoNull2-568h@2x.png in Resources */,
@@ -380,6 +391,11 @@
 				210958CE16D8505B00426771 /* fondoNull2@2x.png in Resources */,
 				21E3F77016DD67C800660C7A /* noImg.png in Resources */,
 				21E3F77116DD67C800660C7A /* noImg@2x.png in Resources */,
+				21F1953C16E026F300E62AF2 /* cercleRoig.png in Resources */,
+				21F1953D16E026F300E62AF2 /* cercleRoig@2x.png in Resources */,
+				21F1953E16E0301A00E62AF2 /* Default-568h@2x.png in Resources */,
+				21F1953F16E0302300E62AF2 /* Default@2x.png in Resources */,
+				21F1954016E0302A00E62AF2 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,10 +411,11 @@
 				21FF889516D28FDF00CB5BF3 /* ViewController.m in Sources */,
 				21FF88C216D2C13800CB5BF3 /* TaulaUsuarisViewControler.m in Sources */,
 				21FF88C716D2D4BD00CB5BF3 /* TaulaDinarsViewController.m in Sources */,
-				21FF88CB16D2DC7300CB5BF3 /* NouUsuariViewController.m in Sources */,
-				213F5E7F16D43167005DFB59 /* NouDinarViewController.m in Sources */,
-				210958D116D97E4200426771 /* DetallDinarViewController.m in Sources */,
 				21E3F76C16DCE06700660C7A /* NouDinarVC.m in Sources */,
+				21D3298116E4F52700B72D87 /* DetallDinarsTbViewControler.m in Sources */,
+				21D3298816E6250C00B72D87 /* DetallDinarVC.m in Sources */,
+				21D3298C16E67A6E00B72D87 /* PagamentsVC.m in Sources */,
+				21EC955716E6C25000AE6BB7 /* TPKeyboardAvoidingTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

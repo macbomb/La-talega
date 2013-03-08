@@ -13,10 +13,14 @@
     NSMutableArray *usuarisMutableArray;
     NSMutableDictionary *rootDictionary;
     NSMutableArray *seleccioComensals;
+    NSMutableDictionary *comensalMutDict;
+    NSMutableArray *comensalsMutArr;
     NSDate *ara;
     NSString *stringAra;
     NSDateFormatter *formatData;
     UITextField *txfMenu;
+    UITextField *txfNouUsuari;
+    UIButton *btNouUsuari;
     UILabel *lbData;
 }
 
@@ -64,7 +68,6 @@
     gestureRecognizer.cancelsTouchesInView = NO;
     
     UIImageView *imgFons = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fondo.png"]];
-    [tbNouDinar addSubview:imgFons];
     [tbNouDinar setBackgroundView:imgFons];
     [tbNouDinar setBackgroundColor:[UIColor clearColor]];
     tbNouDinar.opaque = NO;
@@ -73,6 +76,7 @@
 -(void)amagaTeclat{
     
     [txfMenu resignFirstResponder];
+    [txfNouUsuari resignFirstResponder];
 }
 
 -(NSString *)plistPath{
@@ -143,7 +147,7 @@
                         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:celaMenu];
                     }
                     txfMenu = (UITextField *)[cell viewWithTag:200];
-                    txfMenu.placeholder = @"preu";
+                    txfMenu.placeholder = @"Menu";
                     
                     break;
             }
@@ -159,7 +163,6 @@
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:celaComensal];
             }
             cell.textLabel.text = [usuarisMutableArray objectAtIndex:indexPath.row];  [tableView cellForRowAtIndexPath:indexPath].selected = NO;
-            
             cell.tag = indexPath.row;
             break;
             
@@ -169,6 +172,9 @@
             if (cell == nil) {
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:celaNouComensal];
             }
+            txfNouUsuari = (UITextField *)[cell viewWithTag:105];
+            btNouUsuari = (UIButton *)[cell viewWithTag:106];
+            [btNouUsuari addTarget:self action:@selector(introNouUsuari) forControlEvents:UIControlEventTouchUpInside];
             
             break;
     }
@@ -176,60 +182,17 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 #pragma mark - Table view delegate
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UIStoryboard *storyboard;
+    //UIStoryboard *storyboard;
     switch (indexPath.section) {
         case 1:
             [seleccioComensals replaceObjectAtIndex:indexPath.row withObject:[NSNumber numberWithBool:YES]];
             break;
-        case 2:
-            storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard"bundle:nil];
-            NouUsuariViewController *nouComensalViewC = [storyboard instantiateViewControllerWithIdentifier:@"nouComensalViewC"];
-            nouComensalViewC.delegate = self;
-            [self presentViewController:nouComensalViewC animated:YES completion:NULL];
-            break;
+            
     }
 }
 
@@ -284,6 +247,27 @@
     
 }
 
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 1) {
+        
+        [usuarisMutableArray removeObjectAtIndex:indexPath.row];
+        [rootDictionary setObject:usuarisMutableArray forKey:@"usuaris"];
+        
+        NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:rootDictionary format:NSPropertyListBinaryFormat_v1_0 errorDescription:nil];
+        if (plistData) {
+            [plistData writeToFile:[self plistPath] atomically:YES];
+        }
+        
+        [seleccioComensals removeAllObjects];
+        for (int i = 0; i < [usuarisMutableArray count]; i++) {
+            [seleccioComensals addObject:[NSNumber numberWithBool:NO]];
+        }
+        [tableView reloadData];
+        
+    }
+    
+}
+
 #pragma mark - Metodo delegado
 
 -(void)introNousUsuaris:(NSArray *)usuarisNous{
@@ -313,15 +297,15 @@
     NSString *menu = [txfMenu.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     bool seleccionat;
     int seleccionats = 0;
-    NSMutableDictionary *comensalMutDict = [[NSMutableDictionary alloc] init];
-    NSMutableArray *comensalsMutArr = [[NSMutableArray alloc] init];
+    comensalsMutArr = [[NSMutableArray alloc] init];
     for (int i = 0; i < [seleccioComensals count]; i++) {
         seleccionat = [[seleccioComensals objectAtIndex:i] boolValue];
         if (seleccionat) {
+            comensalMutDict = [[NSMutableDictionary alloc] init];
             [comensalMutDict setObject:[usuarisMutableArray objectAtIndex:i] forKey:@"nomComensal"];
-            [comensalMutDict setObject:[NSNumber numberWithBool:NO] forKey:@"pagat"];
-            [comensalMutDict setObject:[NSNumber numberWithInt:0] forKey:@"pagatParcial"];
+            [comensalMutDict setObject:[NSNumber numberWithInt:0] forKey:@"pagat"];
             [comensalsMutArr addObject:comensalMutDict];
+            
             seleccionats ++;
         }
     }
@@ -337,8 +321,16 @@
         [nouDinarMutDict setObject:@"noImg.png" forKey:@"imatge"];
         [nouDinarMutDict setObject:comensalsMutArr forKey:@"comensals"];
         
+        NSMutableArray *dinarsMutableArray = [[NSMutableArray alloc] initWithArray:[rootDictionary objectForKey:@"dinars"]];
+        [dinarsMutableArray addObject:nouDinarMutDict];
+        [rootDictionary setObject:dinarsMutableArray forKey:@"dinars"];
         
-        [self.delegate introNouDinar:nouDinarMutDict];
+        NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:rootDictionary format:NSPropertyListBinaryFormat_v1_0 errorDescription:nil];
+        if (plistData) {
+            [plistData writeToFile:[self plistPath] atomically:YES];
+        }
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"actualitzaDades" object:nil];
         [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
@@ -346,6 +338,27 @@
 - (IBAction)cancelaNouDinar:(UIBarButtonItem *)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (void)introNouUsuari{
+    NSString *nomSenseEspais = [txfNouUsuari.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    if (nomSenseEspais.length  > 0) {
+        txfNouUsuari.text = @"";
+        [usuarisMutableArray addObject:nomSenseEspais];
+        [tbNouDinar reloadData];
+        [seleccioComensals removeAllObjects];
+        for (int i = 0; i < [usuarisMutableArray count]; i++) {
+            [seleccioComensals addObject:[NSNumber numberWithBool:NO]];
+        }
+        
+        [rootDictionary setObject:usuarisMutableArray forKey:@"usuaris"];
+        
+        NSData *plistData = [NSPropertyListSerialization dataFromPropertyList:rootDictionary format:NSPropertyListBinaryFormat_v1_0 errorDescription:nil];
+        if (plistData) {
+            [plistData writeToFile:[self plistPath] atomically:YES];
+        }
+    }
+}
+    
 
 
 
